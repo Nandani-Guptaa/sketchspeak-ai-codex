@@ -8,7 +8,7 @@ interface VoiceInputOptions {
 }
 
 export function useVoiceInput({ onFinalTranscript, language = "en-US" }: VoiceInputOptions) {
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any>(null);
   const callbackRef = useRef(onFinalTranscript);
   const [isSupported, setIsSupported] = useState(false);
   const [isListening, setIsListening] = useState(false);
